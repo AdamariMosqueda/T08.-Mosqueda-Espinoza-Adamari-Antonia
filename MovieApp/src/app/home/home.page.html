@@ -1,0 +1,29 @@
+    <ion-content>
+
+    <ion-header>
+      <ion-toolbar>
+          <ion-title class="ion-text-center"> MovieApp
+           </ion-title>
+      </ion-toolbar>
+      <ion-toolbar >
+        <ion-searchbar [(ngModel)]="movieTitle"></ion-searchbar>
+          <ion-buttons slot="end">
+            <ion-button color="light" (click)="searchMovie()">
+              <ion-icon name="search-sharp"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+
+    <ion-card>
+      <ion-img [src]="mov.imageUrl"></ion-img>
+        <ion-card-header>
+          <ion-card-title><b>{{mov.title}}</b></ion-card-title>
+            <ion-card-subtitle> <b>Año: </b>{{mov.year}} - <b>Clasificación:</b> {{mov.rated}} </ion-card-subtitle>
+          </ion-card-header>
+         <ion-card-content>
+            <b>Descripción:</b> {{mov.description}}
+        </ion-card-content>
+   </ion-card>
+  </ion-content>
